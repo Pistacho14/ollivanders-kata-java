@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import edu.teamrocket.domain.NormalItem;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class NormalItemTest {
+class NormalItemTest {
 
     @Test
-    public void crearNormalItem() {
+    void crearNormalItem() {
 
         NormalItem normal = new NormalItem("+5 Dexterity Vest", 20, 10);
         assertEquals("+5 Dexterity Vest", normal.getName());
@@ -16,13 +16,13 @@ public class NormalItemTest {
     }
 
     @Test
-    public void toStringTest() {
+    void toStringTest() {
         NormalItem normal = new NormalItem("+5 Dexterity Vest", 20, 10);
         System.out.println(normal.toString());
     }
 
     @Test
-    public void updateQualityNormalItem() {
+    void updateQualityNormalItem() {
 
         NormalItem normal = new NormalItem("+5 Dexterity Vest", 20, 10);
         normal.updateQuality();
@@ -31,7 +31,7 @@ public class NormalItemTest {
     }
 
     @Test
-    public void updateQualityNormalItemExpired() {
+    void updateQualityNormalItemExpired() {
 
         NormalItem normal = new NormalItem("+5 Dexterity Vest", 0, 20);
         normal.updateQuality();
@@ -40,7 +40,7 @@ public class NormalItemTest {
     }
 
     @Test
-    public void qualityMinZERO() {
+    void qualityMinZERO() {
 
         NormalItem normal = new NormalItem("+5 Dexterity Vest", 10, 0);
         normal.updateQuality();
