@@ -6,21 +6,21 @@ import edu.teamrocket.domain.*;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 
-public class GildedRoseTest {
+class GildedRoseTest {
 
     private GildedRose shop = null;
     private NormalItem normal = null;
     private AgedBrie brie = null;
 
     @BeforeEach
-    public void setupInventario() {
+    void setupInventario() {
        shop = new GildedRose();
        normal = new NormalItem("+5 Dexterity Vest", 20, 10);
        brie = new AgedBrie("Aged Brie", 0, 2);
     }
 
     @Test
-    public void toStringTest() {
+    void toStringTest() {
         shop.addItem(brie);
         brie = new AgedBrie("Aged Brie", 10, 10);
         shop.addItem(brie);
@@ -29,7 +29,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void addItemTest() {
+    void addItemTest() {
         shop.addItem(normal);
         shop.addItem(brie);
         assertEquals(2, shop.inventory().size(), 0);
@@ -42,7 +42,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void updateQuality() {
+    void updateQuality() {
         shop.addItem(normal);
         shop.addItem(brie);
         assertEquals(2, shop.inventory().size(), 0);
