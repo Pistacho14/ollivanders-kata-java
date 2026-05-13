@@ -5,10 +5,10 @@ import edu.teamrocket.domain.Conjured;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class ConjuredTest {
+class ConjuredTest {
 
     @Test
-    public void crearConjured() {
+    void crearConjured() {
 
         Conjured conjured = new Conjured("Conjured Mana Cake", 6, 3);
         assertEquals("Conjured Mana Cake", conjured.getName());
@@ -17,14 +17,14 @@ public class ConjuredTest {
     }
 
     @Test
-    public void toStringTest() {
+    void toStringTest() {
         Conjured conjured = new Conjured("Conjured Mana Cake", 6, 3);
         System.out.println("toString() Conjured test:");
         System.out.println(conjured.toString());
     }
 
     @Test
-    public void updateQualityConjured() {
+    void updateQualityConjured() {
 
         Conjured conjured = new Conjured("Conjured Mana Cake", 6, 3);
         conjured.updateQuality();
@@ -33,7 +33,7 @@ public class ConjuredTest {
     }
 
     @Test
-    public void updateQualityConjuredJustExpired() {
+    void updateQualityConjuredJustExpired() {
 
         Conjured conjured = new Conjured("Conjured Mana Cake", 0, 6);
         conjured.updateQuality();
@@ -42,7 +42,7 @@ public class ConjuredTest {
     }
 
     @Test
-    public void updateQualityConjuredExpired() {
+    void updateQualityConjuredExpired() {
 
         Conjured conjured = new Conjured("Conjured Mana Cake", -1, 6);
         conjured.updateQuality();
@@ -51,7 +51,7 @@ public class ConjuredTest {
     }
 
     @Test
-    public void qualityMinZERO() {
+    void qualityMinZERO() {
 
         Conjured brie = new Conjured("Conjured Mana Cake", 1, 1);
         brie.updateQuality();
