@@ -2,7 +2,7 @@ package edu.teamrocket.domain;
 
 public class Backstage extends NormalItem{
     
-    public Backstage(String name, int quality, int sellIn) {
+    public Backstage(String name, int sellIn, int quality) {
         super(name, quality, sellIn);
     }
 
@@ -17,5 +17,11 @@ public class Backstage extends NormalItem{
         } else {
             this.computeQuality(0);
         }
+        this.setSellIn();
+    }
+
+    @Override
+    protected void computeQuality(int quality) {
+        super.computeQuality(Math.min(quality, 50));
     }
 }
