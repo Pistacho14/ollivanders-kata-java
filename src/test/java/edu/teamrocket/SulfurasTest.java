@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import edu.teamrocket.domain.Sulfuras;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SulfurasTest {
+class SulfurasTest {
 
     @Test
-    public void crearSulfuras() {
+    void crearSulfuras() {
 
         Sulfuras sulfuras = new Sulfuras("Sulfuras, Hand of Ragnaros", 0, 80);
         assertEquals("Sulfuras, Hand of Ragnaros", sulfuras.getName());
@@ -16,14 +16,14 @@ public class SulfurasTest {
     }
 
     @Test
-    public void toStringTest() {
+    void toStringTest() {
         Sulfuras sulfuras = new Sulfuras("Sulfuras, Hand of Ragnaros", 0, 80);
         System.out.println("Sulfuras toString() test");
         System.out.println(sulfuras.toString());
     }
 
     @Test
-    public void updateQualitySulfuras() {
+    void updateQualitySulfuras() {
 
         Sulfuras sulfuras = new Sulfuras("Sulfuras, Hand of Ragnaros", 0, 80);
         sulfuras.updateQuality();
