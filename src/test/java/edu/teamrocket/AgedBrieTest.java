@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AgedBrieTest {
 
     @Test
-    public void crearAgedBrie() {
+    void crearAgedBrie() {
 
         AgedBrie cheese = new AgedBrie("Aged Brie", 2, 0);
         assertEquals("Aged Brie", cheese.getName());
@@ -16,7 +16,7 @@ public class AgedBrieTest {
     }
 
     @Test
-    public void toStringTest() {
+    void toStringTest() {
         AgedBrie cheese = new AgedBrie("Aged Brie", 2, 0);
         String result = cheese.toString();
         assertNotNull(result);
@@ -24,7 +24,7 @@ public class AgedBrieTest {
     }
 
     @Test
-    public void updateQualityBrie() {
+    void updateQualityBrie() {
 
         AgedBrie cheese = new AgedBrie("Aged Brie", 2, 1);
         cheese.updateQuality();
@@ -33,7 +33,7 @@ public class AgedBrieTest {
     }
 
     @Test
-    public void updateQualityBrieExpired() {
+    void updateQualityBrieExpired() {
 
         AgedBrie cheese = new AgedBrie("Aged Brie", 0, 0);
         cheese.updateQuality();
@@ -42,7 +42,7 @@ public class AgedBrieTest {
     }
 
     @Test
-    public void qualityMax50() {
+    void qualityMax50() {
 
         AgedBrie brie = new AgedBrie("Aged Brie", 50, -1);
         brie.updateQuality();
