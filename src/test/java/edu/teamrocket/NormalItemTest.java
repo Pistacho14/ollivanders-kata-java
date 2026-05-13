@@ -9,7 +9,7 @@ public class NormalItemTest {
     @Test
     public void crearNormalItem() {
 
-        NormalItem normal = new NormalItem("+5 Dexterity Vest", 10, 20);
+        NormalItem normal = new NormalItem("+5 Dexterity Vest", 20, 10);
         assertEquals("+5 Dexterity Vest", normal.getName());
         assertEquals(10, normal.getSellIn(), 0);
         assertEquals(20, normal.getQuality(), 0);
@@ -17,14 +17,14 @@ public class NormalItemTest {
 
     @Test
     public void toStringTest() {
-        NormalItem normal = new NormalItem("+5 Dexterity Vest", 10, 20);
+        NormalItem normal = new NormalItem("+5 Dexterity Vest", 20, 10);
         System.out.println(normal.toString());
     }
 
     @Test
     public void updateQualityNormalItem() {
 
-        NormalItem normal = new NormalItem("+5 Dexterity Vest", 10, 20);
+        NormalItem normal = new NormalItem("+5 Dexterity Vest", 20, 10);
         normal.updateQuality();
         assertEquals(9, normal.getSellIn(), 0);
         assertEquals(19, normal.getQuality(), 0);
